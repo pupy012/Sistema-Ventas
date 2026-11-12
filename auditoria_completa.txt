@@ -1,0 +1,106 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261112184406
+Nombre de usuario: LAPTOP-8UKVNT31\silpu
+Usuario RunAs: LAPTOP-8UKVNT31\silpu
+Nombre de la configuración: 
+Máquina: LAPTOP-8UKVNT31 (Microsoft Windows NT 10.0.26300.0)
+Aplicación host: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Id. de proceso: 11096
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\silpu\Desktop\auditoria_completa.txt
+PS C:\Windows\system32> cd $HOME\Desktop
+PS C:\Users\silpu\Desktop> mkdir Sistema_Ventas
+
+
+    Directorio: C:\Users\silpu\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     18:44                Sistema_Ventas
+
+
+PS C:\Users\silpu\Desktop> cd Sistema_Ventas
+PS C:\Users\silpu\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos
+
+
+    Directorio: C:\Users\silpu\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     18:44                Frontend
+d-----        12/11/2026     18:44                Backend
+d-----        12/11/2026     18:44                BaseDatos
+
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git init
+Initialized empty Git repository in C:/Users/silpu/Desktop/Sistema_Ventas/.git/
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git checkout main
+error: pathspec 'main' did not match any file(s) known to git
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git branch -M main
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git commit -m "Día 1: Despliegue de la estructura base"
+[main (root-commit) 4373374] Día 1: Despliegue de la estructura base
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git remote add origin https://github.com/pupy012/Sistema-Ventas.git
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 293 bytes | 293.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/pupy012/Sistema-Ventas.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+PS C:\Users\silpu\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\silpu\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\silpu\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias
+
+
+    Directorio: C:\Users\silpu\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     18:50                Pruebas_Unitarias
+
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git commit -m "Día 2: Agregados scripts de DB y carpeta de pruebas"
+[main b3f6950] Día 2: Agregados scripts de DB y carpeta de pruebas
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 BaseDatos/conexion.ps1
+PS C:\Users\silpu\Desktop\Sistema_Ventas> git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 529 bytes | 529.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/pupy012/Sistema-Ventas.git
+   4373374..b3f6950  main -> main
+PS C:\Users\silpu\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261112185101
+**********************
